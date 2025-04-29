@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => { 
-    const celsiusInput = document.getElementById('celsius');
+    const celsiusInput = document.getElementById('celcius');
     const fahrenheitInput = document.getElementById('fahrenheit');
     const calculationSteps = document.getElementById('calculation-steps');
     const convertBtn = document.getElementById('convert-btn');
@@ -8,15 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     fahrenheitInput.setAttribute('readonly', true);
 
     convertBtn.addEventListener('click', () => {
-        const celsius = parseFloat(celsiusInput.value);
+        const celcius = parseFloat(celsiusInput.value);
 
-        if (isNaN(celsius)) {
+        if (isNaN(celcius)) {
             fahrenheitInput.value = '';
             calculationSteps.value = 'Masukkan angka yang valid untuk dikonversi.';
             return;
         }
 
-        const fahrenheit = (celsius * 9/5) + 32;
+        const fahrenheit = (celcius * 9/5) + 32;
 
         fahrenheitInput.value = fahrenheit.toFixed(2);
         calculationSteps.value = `${celsius}°C * (9/5) + 32 = ${fahrenheit.toFixed(2)}°F`;
