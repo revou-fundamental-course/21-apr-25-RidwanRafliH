@@ -75,6 +75,11 @@ h1, h2, h3 {
     color: white;
 }
 
+#reverse-btn {
+    background-color: #337ab7;
+    color: white;
+}
+
 .formula-box p {
     margin-bottom: 10px;
     line-height: 1.6;
