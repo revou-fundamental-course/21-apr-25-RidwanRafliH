@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +8,41 @@
 </head>
 <body>
     <div class="container">
-        <h1>Konversi Suhu</h1>
+        <h2>Konversi Suhu Celsius (°C) ke Fahrenheit (°F)</h2>
 
-        <div class="converter-box">
-            <label for="celcius"> Masukkan suhu derajat Celcius (°C) ke kotak dibawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (°F)</label>
         <div class="input-group">
-            <label for="celcius">Celcius (°C):</label>
-            <input type="number" id="celcius">
-    </div>
+            <label for="celsius">Celsius (°C):</label>
+            <input type="number" id="celsius" placeholder="Masukkan suhu dalam Celsius">
+        </div>
 
-    <div class="button-group">
-        <button id="convert-btn">Konversi</button>
-        <button id="reset-btn">Reset</button>
-    </div>
+        <div class="button-group">
+            <button id="convert-btn">Konversi</button>
+            <button id="reset-btn">Reset</button>
+            <button id="reverse-btn">Reverse</button>
+        </div>
 
-    <div class="input-group">
-        <label for="fahrenheit">Fahrenheit (°F):</label>
-        <input type="text" id="fahrenheit" readonly>
-    </div>
+        <div class="input-group">
+            <label for="fahrenheit">Fahrenheit (°F):</label>
+            <input type="text" id="fahrenheit" readonly>
+        </div>
 
-    <div class="formula-box">
-        <h2>Rumus Konversi: Celcius ke Fahrenheit</h2>
-        <p>Untuk mengubah suhu dari Celsius ke Fahrenheit, kalikan suhu dalam Celsius dengan 9/5 (atau 1.8), kemudian tambahkan 32 pada hasilnya.</p>
-        <p>Secara matematis ditulis:</p>
-        <p class="formula">Fahrenheit = (Celcius &times; 9/5) + 32</p>
-        <p>atau</p>
-        <p class="formula">Fahrenheit = (Celcius &times; 1.8) + 32</p>
+        <div class="calculation-area">
+            <h3>Cara Kalkulasi:</h3>
+            <textarea id="calculation" readonly rows="3"></textarea>
+        </div>
+
+        <div class="formulas">
+            <h3>Rumus Konversi:</h3>
+            <p><strong>Celsius ke Fahrenheit:</strong></p>
+            <p>S(&deg;F) = (S(&deg;C) &times; 9/5) + 32</p>
+            <p>atau</p>
+            <p>S(&deg;F) = (S(&deg;C) &times; 1.8) + 32</p>
+
+            <p><strong>Fahrenheit ke Celsius:</strong></p>
+            <p>S(&deg;C) = (S(&deg;F) - 32) &times; 5/9</p>
         </div>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
 </html>
